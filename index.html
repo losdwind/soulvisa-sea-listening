@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17171d">
+  <meta name="app-version" content="2026-11-03-github-trial">
+  <meta name="description" content="李奥 SOULVISA《丰饶之海》专辑试听与歌词。">
+  <title>丰饶之海 · 李奥 SOULVISA</title>
+  <link rel="icon" href="./assets/cover.jpg">
+  <link rel="stylesheet" href="./styles.css?v=20261103-review">
+  <script src="./album-data.js?v=20261103-review" defer></script>
+  <script src="./completion.js?v=20261103-review" defer></script>
+  <script src="./media-session.js?v=20261103-review" defer></script>
+  <script src="./app.js?v=20261103-review" defer></script>
+  <script src="./socials.js?v=20261103-review" defer></script>
+</head>
+<body>
+  <a class="skip" href="#player">跳到试听</a>
+  <main class="shell">
+    <header class="topbar"><a class="wordmark" href="#">李奥 <span>SOULVISA</span></a><button id="theme" class="icon" aria-label="切换到浅色模式" title="切换主题">☼</button></header>
+    <section class="album" aria-labelledby="album-title">
+      <button class="artwork" id="cover-open" aria-label="查看完整封面"><img src="./assets/cover.jpg" alt="《丰饶之海》资料包中的封面：雨幕中的红裙与倒影" width="1200" height="928"><span>查看封面 ↗</span></button>
+      <div class="album-info"><p class="eyebrow">THE SEA OF FERTILITY</p><h1 id="album-title"><span class="visually-hidden">《丰饶之海》</span><span class="album-title-graphic" aria-hidden="true"><img src="./assets/album-title.jpg" alt="" width="2048" height="864"></span></h1><p class="artist">李奥 <span>SOULVISA</span></p><div id="introduction"></div><details class="about"><summary><span class="intro-toggle-label">展开</span><span class="intro-toggle-icon" aria-hidden="true">＋</span></summary><div id="intro-more"></div></details></div>
+    </section>
+    <nav class="page-nav" aria-label="页面导航"><a href="#tracklist">全部曲目 <span>15</span></a></nav>
+    <section class="player" id="player" aria-label="专辑试听播放器" tabindex="-1">
+      <div class="player-top"><div class="now"><p id="status" class="eyebrow" aria-live="polite">单曲试听</p><h2 id="now-title">太空流民#1出发</h2></div><div class="transport"><button id="rewind" class="icon" aria-label="后退10秒" title="后退10秒">↶<small>10</small></button><button id="play" class="play" aria-label="播放太空流民#1出发">▶</button><button id="mute" class="icon" aria-label="静音">♪</button><input id="volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="音量"></div></div>
+      <div class="timeline"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" step="0.1" value="0" disabled aria-label="播放进度"><span id="duration">—:—</span></div>
+      <div class="playback-options"><label class="continuous-control"><input id="continuous-play" type="checkbox" checked><span>连续播放</span></label><span class="playback-hint">FLAC 无损 · 24bit / 48kHz</span></div>
+      <p id="message" role="status">《太空流民#1出发》· 专辑试听</p>
+      <audio id="audio" preload="none"></audio>
+    </section>
+    <p class="listening-guide">从「出发」启程，经由「发现」，走向「融解」。<br>曲序也是叙事的一部分，建议按序聆听☕</p>
+    <div class="list-heading" id="tracklist"><h2>专辑曲目</h2><span>TRACKLIST / 15</span></div>
+    <div id="tracks" class="tracks"></div>
+    <section id="arrival" class="arrival" aria-labelledby="arrival-title" hidden>
+      <svg class="arrival-waves" viewBox="0 0 28 24" width="28" height="24" aria-hidden="true"><path d="M2 5Q5 8 8 5T14 5T20 5T26 5M2 12Q5 15 8 12T14 12T20 12T26 12M2 19Q5 22 8 19T14 19T20 19T26 19" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+      <p class="eyebrow">THE SEA OF FERTILITY</p>
+      <h2 id="arrival-title" tabindex="-1">你已经抵达这里。</h2>
+      <p class="arrival-thanks">谢谢你花时间听完这张专辑。</p>
+      <div class="arrival-question"><p>出发时，你以为自己会找到什么？</p><div class="arrival-actions"><button id="leave-message" type="button" aria-expanded="false" aria-controls="message-form">留下一句话</button><span aria-hidden="true">·</span><button id="listen-again" type="button">再次聆听</button></div></div>
+      <form id="message-form" class="message-form" hidden>
+        <label for="message-text">留给李奥的一句话</label>
+        <textarea id="message-text" name="message" rows="3" maxlength="500" required placeholder="写下此刻想说的话……"></textarea>
+        <p class="message-privacy">匿名留言，不公开展示。</p>
+        <button id="send-message" type="submit">留下这句话</button>
+        <p id="message-result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="artist-profile" aria-labelledby="artist-name">
+      <img class="artist-portrait" src="./assets/artist-portrait.jpg" alt="李奥 SOULVISA 个人照片" width="1200" height="1200" loading="lazy">
+      <div class="artist-profile-info">
+        <p class="eyebrow">ABOUT THE ARTIST</p>
+        <h2 id="artist-name">李奥 <span>SOULVISA</span></h2>
+        <div class="artist-bio"><p>十八九岁时，Pink Floyd 的《月之暗面》打开了李奥的音乐想象，也让他决定做一张自己的专辑。为了实现这个愿望，他从头学习词曲、乐器、编曲与制作，却没想到，一做就是九年。</p><p>九年里，他几乎每天埋首音乐。技术在进步，耳朵和审美也在变化，昨天满意的声音，明天又被亲手推翻。专辑迟迟未完成，创作它的人却一直在改变。</p><p>曾经，一张专辑为他打开了一个世界。九年后，他将自己的世界写进《丰饶之海》，等待与另一个聆听者相遇。</p><p>他的创作从个人的情绪、记忆与生活经验中生长，记录自身与周遭世界的变化。在书写自己的同时，他也爱关注不同处境中的人，尝试理解他们如何承受生活、面对欲望，又为何作出某种选择。这份共情使他的表达向外延伸，让个人的感受与他人的经历在音乐中产生联系。</p></div>
+      </div>
+      <div class="artist-contact" aria-labelledby="artist-contact-title">
+        <p class="eyebrow" id="artist-contact-title">CONTACT &amp; FOLLOW</p>
+        <div class="artist-links">
+          <a href="mailto:437698265@qq.com">对外邮箱 <span>437698265@qq.com</span></a>
+          <button class="social-card-button" type="button" data-social-card="douyin" aria-haspopup="dialog" aria-controls="social-dialog">抖音 <span>查看名片</span></button>
+          <button class="social-card-button" type="button" data-social-card="xiaohongshu" aria-haspopup="dialog" aria-controls="social-dialog">小红书 <span>查看名片</span></button>
+        </div>
+      </div>
+    </section>
+    <footer><span>李奥 SOULVISA · 《丰饶之海》</span><span>试听页 · 交互测试版</span></footer>
+  </main>
+  <dialog id="cover-dialog" aria-label="专辑封面"><button class="close" aria-label="关闭封面">×</button><img src="./assets/cover.jpg" alt="《丰饶之海》完整封面"></dialog>
+  <dialog id="social-dialog" aria-labelledby="social-title">
+    <button class="close" type="button" aria-label="关闭社交名片">×</button>
+    <h2 id="social-title">社交名片</h2>
+    <p id="social-account"></p>
+    <img id="social-image" alt="">
+    <div class="social-dialog-actions"><button id="social-copy" type="button">复制账号</button><a id="social-save" download>保存名片</a></div>
+    <p id="social-copy-status" role="status" aria-live="polite"></p>
+  </dialog>
+  <noscript>请开启 JavaScript 以查看曲目与歌词。<a href="./media/15.flac">《是的》试听</a></noscript>
+</body>
+</html>
