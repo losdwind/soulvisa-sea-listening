@@ -34,21 +34,6 @@
     <p class="listening-guide">从「出发」启程，经由「发现」，走向「融解」。<br>曲序也是叙事的一部分，建议按序聆听☕</p>
     <div class="list-heading" id="tracklist"><h2>专辑曲目</h2><span>TRACKLIST / 15</span></div>
     <div id="tracks" class="tracks"></div>
-    <section id="arrival" class="arrival" aria-label="聆听感受与匿名留言" data-complete="false">
-      <svg class="arrival-waves" viewBox="0 0 28 24" width="28" height="24" aria-hidden="true"><path d="M2 5Q5 8 8 5T14 5T20 5T26 5M2 12Q5 15 8 12T14 12T20 12T26 12M2 19Q5 22 8 19T14 19T20 19T26 19" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-      <p class="eyebrow">THE SEA OF FERTILITY</p>
-      <div id="arrival-completion" class="arrival-completion">
-        <h2 id="arrival-title" tabindex="-1">你已经抵达这里。</h2>
-        <p class="arrival-thanks">谢谢你花时间听完这张专辑❤️</p>
-      </div>
-      <form id="message-form" class="message-form">
-        <label for="message-text">留给李奥的一句话</label>
-        <textarea id="message-text" name="message" rows="3" maxlength="500" required placeholder="写下此刻想说的话……"></textarea>
-        <p class="message-privacy">匿名留言，不公开展示。</p>
-        <button id="send-message" type="submit">留下这句话</button>
-        <p id="message-result" role="status" aria-live="polite"></p>
-      </form>
-    </section>
     <section class="artist-profile" aria-labelledby="artist-name">
       <img class="artist-portrait" src="./assets/artist-portrait.jpg?v=20261104-mainland" alt="李奥 SOULVISA 个人照片：红色背景与霓虹光轨" width="1200" height="1200" loading="lazy">
       <div class="artist-profile-info">
@@ -68,7 +53,22 @@
         <p id="wechat-copy-status" class="contact-copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>
-    <footer><span>李奥 SOULVISA · 《丰饶之海》</span><span>试听页 · 交互测试版</span></footer>
+    <section id="arrival" class="arrival" aria-label="聆听感受与匿名留言" data-complete="false">
+      <svg class="arrival-waves" viewBox="0 0 28 24" width="28" height="24" aria-hidden="true"><path d="M2 5Q5 8 8 5T14 5T20 5T26 5M2 12Q5 15 8 12T14 12T20 12T26 12M2 19Q5 22 8 19T14 19T20 19T26 19" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+      <p class="eyebrow">THE SEA OF FERTILITY</p>
+      <div id="arrival-completion" class="arrival-completion">
+        <h2 id="arrival-title" tabindex="-1">你已经抵达这里。</h2>
+        <p class="arrival-thanks">谢谢你花时间听完这张专辑❤️</p>
+      </div>
+      <form id="message-form" class="message-form">
+        <label for="message-text">留给李奥的一句话</label>
+        <textarea id="message-text" name="message" rows="3" maxlength="500" required placeholder="写下此刻想说的话……"></textarea>
+        <p class="message-privacy">匿名留言，不公开展示。</p>
+        <button id="send-message" type="submit">留下这句话</button>
+        <p id="message-result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <footer><span>李奥 SOULVISA · 《丰饶之海》</span><span>试听页</span></footer>
   </main>
   <dialog id="cover-dialog" aria-label="专辑封面"><button class="close" aria-label="关闭封面">×</button><img src="./assets/cover.jpg" alt="《丰饶之海》完整封面"></dialog>
   <dialog id="social-dialog" aria-labelledby="social-title">
