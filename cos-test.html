@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《达里安》｜香港无损试听测试</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:#17171d;color:#f2f2f4}body{max-width:720px;margin:60px auto;padding:0 24px;line-height:1.7}small{color:#a7cbb4;letter-spacing:.14em}h1{font-size:32px;margin:14px 0 4px}p{color:#b8b8c0}audio{width:100%;margin:20px 0}button,a{font:inherit}button{padding:10px 18px;border:1px solid #555563;border-radius:8px;background:#272731;color:inherit;margin:0 8px 10px 0;cursor:pointer}button:disabled{opacity:.5;cursor:default}.panel{padding:24px;border:1px solid #363640;border-radius:16px;margin-top:24px}dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}dt{color:#aaaab5}dd{margin:0;text-align:right}pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#b8b8c0;font-size:12px}a{color:#a7cbb4}
+</style>
+<small>HONG KONG · LOSSLESS PLAYBACK TEST</small>
+<h1>《达里安》</h1>
+<p>李奥 SOULVISA · FLAC 无损 · 42.08 MB</p>
+<p>本页只测试香港存储的这一首歌。点击播放后，可以拖动进度条，或跳到歌曲中段检查续播。</p>
+<audio id="audio" controls playsinline preload="none" src="https://soulvisa-lossless-test-20261104-1313808286.cos.ap-hongkong.myqcloud.com/02.flac"></audio>
+<div><button id="play">播放</button><button id="pause">暂停</button><button id="seek" disabled>跳到 01:30</button></div>
+<section class="panel" aria-live="polite">
+<dl><dt>状态</dt><dd id="state">待播放</dd><dt>首次起播等待</dt><dd id="startup">—</dd><dt>当前位置 / 时长</dt><dd id="position">00:00 / —</dd><dt>播放中等待次数</dt><dd id="stalls">0</dd><dt>最近一次跳转等待</dt><dd id="seek-wait">—</dd></dl>
+</section>
+<p>等待时间由当前设备实际播放事件计算。此页面不会自动判断你所在的地区或网络。</p>
+<details class="panel"><summary>查看本次测试记录</summary><pre id="report"></pre></details>
+<p><a href="https://losdwind.github.io/soulvisa-sea-listening/?v=20261104-2">返回正式试听页</a></p>
+<script>
+const audio=document.querySelector('#audio');
+const fields=Object.fromEntries(['state','startup','position','stalls','seek-wait','report'].map(id=>[id,document.getElementById(id)]));
+const record={source:audio.getAttribute('src'),expectedBytes:42079163,expectedSha256:'ef45130aa968a27ee7b253887fbf33ba3d59b9914164b5be5dea4baf035cb4ca',startedAt:null,userAgent:navigator.userAgent,startupMs:null,stalls:0,lastSeekMs:null,error:null,events:[]};
+let requestedAt=null,seekStartedAt=null,hasPlayed=false;
+const clock=t=>Number.isFinite(t)?String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0'):'—';
+function render(){fields.startup.textContent=record.startupMs===null?'—':(record.startupMs/1000).toFixed(2)+' 秒';fields.position.textContent=clock(audio.currentTime)+' / '+clock(audio.duration);fields.stalls.textContent=String(record.stalls);fields['seek-wait'].textContent=record.lastSeekMs===null?'—':(record.lastSeekMs/1000).toFixed(2)+' 秒';fields.report.textContent=JSON.stringify({...record,currentTime:audio.currentTime,duration:Number.isFinite(audio.duration)?audio.duration:null,paused:audio.paused,readyState:audio.readyState},null,2);}
+function event(name){record.events.push({name,at:new Date().toISOString(),position:audio.currentTime});if(record.events.length>150)record.events.shift();render();}
+document.querySelector('#play').addEventListener('click',async()=>{if(requestedAt===null){requestedAt=performance.now();record.startedAt=new Date().toISOString();}try{await audio.play();}catch(e){record.error=e.message;fields.state.textContent='播放失败：'+e.message;event('play-rejected');}});
+document.querySelector('#pause').addEventListener('click',()=>audio.pause());
+document.querySelector('#seek').addEventListener('click',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Math.min(90,audio.duration-1);});
+audio.addEventListener('play',()=>{if(requestedAt===null){requestedAt=performance.now();record.startedAt=new Date().toISOString();}fields.state.textContent='正在加载';event('play');});
+audio.addEventListener('loadedmetadata',()=>{document.querySelector('#seek').disabled=false;event('loadedmetadata');});
+audio.addEventListener('playing',()=>{if(record.startupMs===null&&requestedAt!==null)record.startupMs=Math.round(performance.now()-requestedAt);if(seekStartedAt!==null){record.lastSeekMs=Math.round(performance.now()-seekStartedAt);seekStartedAt=null;}hasPlayed=true;fields.state.textContent='正在播放';event('playing');});
+audio.addEventListener('seeking',()=>{seekStartedAt=performance.now();fields.state.textContent='跳转中';event('seeking');});
+audio.addEventListener('seeked',()=>{if(audio.paused&&seekStartedAt!==null){record.lastSeekMs=Math.round(performance.now()-seekStartedAt);seekStartedAt=null;fields.state.textContent='跳转完成，已暂停';}event('seeked');});
+audio.addEventListener('waiting',()=>{if(hasPlayed&&!audio.seeking&&!audio.paused)record.stalls++;fields.state.textContent=audio.seeking?'跳转中':'等待缓冲';event('waiting');});
+audio.addEventListener('pause',()=>{fields.state.textContent='已暂停';event('pause');});
+audio.addEventListener('ended',()=>{fields.state.textContent='播放结束';event('ended');});
+audio.addEventListener('error',()=>{record.error={code:audio.error?.code,message:audio.error?.message};fields.state.textContent='音频加载失败';event('error');});
+audio.addEventListener('timeupdate',render);
+render();
+</script>
+</html>
