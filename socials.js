@@ -7,6 +7,15 @@
   const dialog = document.getElementById('social-dialog');
   const status = document.getElementById('social-copy-status');
   let active = null;
+  document.getElementById('wechat-copy').addEventListener('click', async () => {
+    const copyStatus = document.getElementById('wechat-copy-status');
+    try {
+      await navigator.clipboard.writeText('soulvisa599');
+      copyStatus.textContent = '微信号已复制。';
+    } catch {
+      copyStatus.textContent = '微信号：soulvisa599，可手动复制。';
+    }
+  });
   document.querySelectorAll('[data-social-card]').forEach(button => {
     button.addEventListener('click', () => {
       active = cards[button.dataset.socialCard];

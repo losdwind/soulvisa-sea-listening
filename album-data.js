@@ -1,3 +1,4 @@
+/* 已确认的15首作品；按2026-11-03提供的PDF与Limbo文档更新。 */
 window.ALBUM_DATA = {
   "title": "丰饶之海",
   "artist": "李奥 SOULVISA",
@@ -107,7 +108,7 @@ window.ALBUM_DATA = {
         "达里安 Don't You Die",
         "              活着"
       ],
-      "audio": null,
+      "audio": "./media/02.flac",
       "sourceDocument": "达里安.docx",
       "brief": "一代代人以劳动托起繁华，却难以分享它；歌声向那些不堪重负的人发出呼喊。",
       "duration": 203.5,
@@ -168,10 +169,10 @@ window.ALBUM_DATA = {
         "脚步才会轻盈呢",
         "往日圣音低语着"
       ],
-      "audio": null,
+      "audio": "./media/04.flac",
       "sourceDocument": "露露小姐.docx",
       "brief": "在欲望与生计之间，一个女人努力保有尚未被生活耗尽的自己。",
-      "duration": 158,
+      "duration": 158.0,
       "creditsTop": [
         "作词：李奥",
         "作曲：李奥",
@@ -239,7 +240,7 @@ window.ALBUM_DATA = {
         "可当它找到了家",
         "祝福吧"
       ],
-      "audio": null,
+      "audio": "./media/03.flac",
       "sourceDocument": "云景路.docx",
       "brief": "当初的愿望渐渐实现，相爱的人却已走散；重访旧日记忆，让怀念慢慢成为祝福。",
       "duration": 174.076563,
@@ -268,7 +269,7 @@ window.ALBUM_DATA = {
       "title": "太空流民#2发现",
       "credit": "制作人：李奥\n编曲：李奥\n和声：李奥\n木吉他：李奥\n音频编辑：李奥\n录音：李奥\n混音：李奥\n母带：杨路帆@Cashmere Studio ",
       "lyrics": [],
-      "audio": null,
+      "audio": "./media/05.flac",
       "sourceDocument": "《太空流民#2发现》.docx",
       "brief": "新世界在眼前展开，探索的欣喜与未知的可能一同涌来。",
       "duration": 55.4375,
@@ -333,7 +334,7 @@ window.ALBUM_DATA = {
         "滋长你的盛开",
         "满载清风去往彼岸"
       ],
-      "audio": null,
+      "audio": "./media/06.flac",
       "sourceDocument": "落水狗.docx",
       "brief": "在迟迟等不到回应的岁月里，与同样挣扎的人相认，替彼此保留希望。",
       "duration": 218.551563,
@@ -405,7 +406,7 @@ window.ALBUM_DATA = {
         "过你湿润眼睛",
         "原来你 和我同样 也困在 雨季"
       ],
-      "audio": null,
+      "audio": "./media/07.flac",
       "sourceDocument": "《矛盾雨》.docx",
       "brief": "渴望借亲密填补内心的空缺，却发现相爱的人，同样困在各自的雨季。",
       "duration": 206.859375,
@@ -474,7 +475,7 @@ window.ALBUM_DATA = {
         "总有人 一去不返",
         "抬头看 都在云端"
       ],
-      "audio": null,
+      "audio": "./media/08.flac",
       "sourceDocument": "石滩.docx",
       "brief": "想象中的月海，竟有着故乡石滩的模样；丰饶的想象与贫瘠的实景，在抵达时相遇。",
       "duration": 190.736792,
@@ -611,7 +612,7 @@ window.ALBUM_DATA = {
         "but never what you needed inside",
         "但你得到的永远不是你真正需要的"
       ],
-      "audio": null,
+      "audio": "./media/11.flac",
       "sourceDocument": "11、Limbo.docx",
       "brief": "欲望与谎言互相掩护，人可以如愿以偿，却仍得不到内心真正需要的东西。",
       "duration": 219.243229,
@@ -693,7 +694,7 @@ window.ALBUM_DATA = {
       "sourceDocument": "《断臂的雕塑》.docx",
       "brief": "当完美成为束缚，残缺与未完成，反而让生命保有继续生长的余地。",
       "number": 10,
-      "audio": null,
+      "audio": "./media/12.flac",
       "duration": 156.609375,
       "creditsTop": [
         "作词：李奥",
@@ -783,7 +784,7 @@ window.ALBUM_DATA = {
         "是光里的尘埃",
         "是你 是我 是这一刻自在  "
       ],
-      "audio": null,
+      "audio": "./media/09.flac",
       "sourceDocument": "一天.docx",
       "brief": "当目光从失去转向身边，爱重新显现在那些早已习以为常的日常里。",
       "duration": 244.0625,
@@ -839,7 +840,7 @@ window.ALBUM_DATA = {
         "It‘s Your TIME TO SHINE（此刻，星辉正为你加冕）",
         "当指间升起皎月 你看 一望无边"
       ],
-      "audio": null,
+      "audio": "./media/10.flac",
       "sourceDocument": "奔跑时的几要素.docx",
       "brief": "在失去与涉险中学会平衡，也学会不再追赶别人的光芒。",
       "duration": 232.782813,
@@ -869,7 +870,7 @@ window.ALBUM_DATA = {
       "title": "太空流民#3融解",
       "credit": "作曲：李奥\n编曲：李奥\n制作人：李奥\n钢琴：李奥\n录音：施鑫文月\n录音棚：江好同频\n混音：李奥\n母带：杨路帆@Cashmere Studio",
       "lyrics": [],
-      "audio": null,
+      "audio": "./media/13.flac",
       "sourceDocument": "《太空流民#3融解》.docx",
       "brief": "关于终点与圆满的执念渐渐松动，容许人生走向预想之外。",
       "duration": 66.902604,
@@ -958,7 +959,7 @@ window.ALBUM_DATA = {
         "Just looking up",
         "这重复的凝望"
       ],
-      "audio": null,
+      "audio": "./media/14.flac",
       "sourceDocument": "丰饶之海.docx",
       "brief": "当感动可以被计算，获得也伴随着遗落：身处丰饶之中，我们是否仍然自由？",
       "duration": 225.75,
@@ -1078,7 +1079,7 @@ window.ALBUM_DATA = {
       "number": "II",
       "title": "发现",
       "titleEn": "DISCOVERY",
-      "startTrack": 4
+      "startTrack": 5
     },
     {
       "id": "dissolution",
@@ -1088,5 +1089,7 @@ window.ALBUM_DATA = {
       "startTrack": 13
     }
   ],
-  "messageEndpoint": null
+  "messageEndpoint": "https://wcnujr548fca.feishu.link/app/app_17hce27jycz/listener-messages/callback",
+  "messageTransport": "encrypted-callback",
+  "messagePublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArf4Fmok73t/81pj37kco970yEuSL3UNHYYjcOWlHNsNB90swB4LZigtqJh/YXwbcE4iK2LivfCEuCjeaM97f+SYmTm5K526psLm6Iz2l/FZDcOLG/vBeILlW9WP065a/kWYA5Xk9byXhdlLlubPQVhwwxvG3NcXg8s9+3TEB6xQUXjhY2CmCyxEqL/s8PwoYHkrRflhiI5ku7mjXD+zfk25i3C0lYNHqX7PP3NfpeHmb8tiyQ/6O6Xr9xuWrFcBhTg27D5jRFYn/d0A3rvMYQET/TrDqGw40iQ9FEhRtwZQH+d0sl4nitEE9qcPDWEgXpeoLez8KJml9jtaxh61qJwIDAQAB"
 };

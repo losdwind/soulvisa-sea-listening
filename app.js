@@ -83,37 +83,37 @@
     const ranges = Array.from({ length: audio.played.length }, (_, i) => [audio.played.start(i), audio.played.end(i)]);
     if (arrivalShown || !audio.ended || !window.ALBUM_COMPLETION.isComplete(audio.duration, ranges)) return;
     arrivalShown = true;
-    $('arrival').hidden = false;
+    $('arrival').dataset.complete = 'true';
     $('arrival-title').focus({ preventScroll: true });
     $('arrival').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
   }
-  $('leave-message').addEventListener('click', () => {
-    const form = $('message-form'); form.hidden = !form.hidden;
-    $('leave-message').setAttribute('aria-expanded', String(!form.hidden));
-    if (!form.hidden) $('message-text').focus();
-  });
-  $('listen-again').addEventListener('click', () => {
-    $('arrival').hidden = true; arrivalShown = false;
-    $('continuous-play').checked = true;
-    choose(0); togglePlay();
-    $('player').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-  if (!data.messageEndpoint) {
-    $('message-text').disabled = true;
-    $('send-message').disabled = true;
-    $('message-result').textContent = '留言功能暂未开放。';
-  }
   let messageRequestId = null;
+  let messageEncryptionKey;
+  const base64url = bytes => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  async function encryptedCallback(payload) {
+    if (!crypto.subtle) throw new Error('请使用系统浏览器打开此页后重试留言。');
+    messageEncryptionKey ||= crypto.subtle.importKey('spki', Uint8Array.from(atob(data.messagePublicKey), c => c.charCodeAt(0)), { name: 'RSA-OAEP', hash: 'SHA-256' }, false, ['encrypt']);
+    const rsa = await messageEncryptionKey;
+    const key = await crypto.subtle.generateKey({ name: 'AES-GCM', length: 256 }, true, ['encrypt']);
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const text = new TextEncoder().encode(JSON.stringify(payload));
+    const cipher = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, text);
+    const wrapped = await crypto.subtle.encrypt({ name: 'RSA-OAEP' }, rsa, await crypto.subtle.exportKey('raw', key));
+    const envelope = { key: base64url(new Uint8Array(wrapped)), iv: base64url(iv), payload: base64url(new Uint8Array(cipher)) };
+    return data.messageEndpoint + '?data=' + base64url(new TextEncoder().encode(JSON.stringify(envelope)));
+  }
   $('message-text').addEventListener('input', () => { messageRequestId = null; $('message-result').textContent = ''; });
   $('message-form').addEventListener('submit', async event => {
     event.preventDefault();
-    if (!data.messageEndpoint) { $('message-result').textContent = '留言功能暂未开放。'; return; }
     const content = $('message-text').value.trim();
     if (!content) { $('message-result').textContent = '先写下一句话吧。'; return; }
     $('send-message').disabled = true; $('message-result').textContent = '正在留下这句话……';
     messageRequestId ||= crypto.randomUUID();
     try {
-      const response = await fetch(data.messageEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: messageRequestId, content }) });
+      const payload = { id: messageRequestId, content };
+      const response = data.messageTransport === 'encrypted-callback'
+        ? await fetch(await encryptedCallback(payload), { cache: 'no-store' })
+        : await fetch(data.messageEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       const receipt = await response.json();
       if (!response.ok) throw new Error(receipt.error || '暂时未能保存，请稍后重试。');
       $('message-result').textContent = receipt.storage === 'local-preview' ? '预览留言已保存在本地，未发送给李奥。' : '你的话已留下，谢谢你。';
