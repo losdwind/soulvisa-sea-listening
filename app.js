@@ -179,5 +179,19 @@
     if (image && !image.getAttribute('src')) image.src = image.dataset.src;
     dialog.showModal();
   });
+  // Keep artist photos out of the initial request queue, even on browsers
+  // whose native lazy-loading distance includes most of this short page.
+  const deferredImages = document.querySelectorAll('img[data-deferred-src]');
+  const revealImage = image => { image.src = image.dataset.deferredSrc; };
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        revealImage(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '600px 0px' });
+    deferredImages.forEach(image => observer.observe(image));
+  } else deferredImages.forEach(revealImage);
   document.querySelectorAll('dialog').forEach(dialog => { dialog.querySelector('.close').addEventListener('click', () => dialog.close()); dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } }); });
 })();
