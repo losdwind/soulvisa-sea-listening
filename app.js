@@ -173,6 +173,11 @@
   function setTheme(value) { document.documentElement.dataset.theme = value; $('theme').setAttribute('aria-label', `切换到${value === 'dark' ? '浅' : '深'}色模式`); $('theme').textContent = value === 'dark' ? '☼' : '◐'; }
   setTheme(theme);
   $('theme').addEventListener('click', () => { theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; setTheme(theme); try { localStorage.setItem('liao-listening-theme', theme); } catch {} });
-  $('cover-open').addEventListener('click', () => $('cover-dialog').showModal());
+  $('cover-open').addEventListener('click', () => {
+    const dialog = $('cover-dialog');
+    const image = dialog.querySelector('img[data-src]');
+    if (image && !image.getAttribute('src')) image.src = image.dataset.src;
+    dialog.showModal();
+  });
   document.querySelectorAll('dialog').forEach(dialog => { dialog.querySelector('.close').addEventListener('click', () => dialog.close()); dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } }); });
 })();
