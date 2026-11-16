@@ -63,3 +63,166 @@
   .artist-profile{grid-template-areas:"portrait" "biography" "stage" "contact";grid-template-rows:auto;gap:22px}
   .wechat-contact{padding:10px 12px;gap:20px;font-size:11px}
 }
+
+/* Artist profile */
+.artist-profile.artist-spread {
+  --spread-gap: clamp(7px, 1.65vw, 17px);
+  --spread-copy: color-mix(in srgb, var(--ink) 63%, var(--muted));
+  display: block;
+  padding-top: clamp(22px, 4vw, 34px);
+}
+.artist-spread-body {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--spread-gap);
+}
+.artist-spread figure { margin: 0; }
+.artist-spread figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.artist-spread-body {
+  margin-block: clamp(23px, 5vw, 43px) clamp(25px, 4vw, 36px);
+  row-gap: 26px;
+  align-items: start;
+}
+.artist-spread .artist-bio {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--spread-copy);
+  font-size: clamp(13px, 1.6vw, 14px);
+  line-height: 1.85;
+}
+.artist-spread .artist-bio p + p { margin-top: 12px; }
+.artist-spread-photos {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spread-gap);
+}
+.artist-spread-photos figure:first-child { grid-column: 1 / -1; }
+.artist-spread .artist-links > * { white-space: nowrap; }
+@media (min-width: 620px) {
+  .artist-spread .artist-bio { grid-column: 1 / 8; padding-right: 7px; }
+  .artist-spread-photos { grid-column: 8 / -1; }
+}
+
+.artist-bold .artist-bold-cover {
+  --bold-ink: #f5efe8;
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1.92;
+  background: radial-gradient(ellipse 32% 105% at 58% 25%, #862227, #5c1823 53%, #1b1118 96%);
+}
+.artist-bold .artist-bold-cover figure {
+  position: absolute;
+  inset-block: 0;
+}
+.artist-bold .artist-bold-cover figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.artist-bold .artist-bold-main {
+  inset-inline-start: 0;
+  width: 64%;
+  mask-image: linear-gradient(90deg, #000 0 87%, transparent);
+}
+.artist-bold .artist-bold-main img { object-position: 56% center; }
+.artist-bold .artist-bold-side {
+  inset-inline-end: 0;
+  width: 45%;
+  mask-image: linear-gradient(90deg, transparent, #000 20%);
+}
+.artist-bold .artist-bold-side img { object-position: left center; }
+.artist-bold .artist-bold-title {
+  color: var(--bold-ink);
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 66%;
+  width: 17.5%;
+  min-width: 65px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.artist-bold-title .eyebrow {
+  position: relative;
+  left: 50%;
+  width: max-content;
+  margin: 0;
+  transform: translateX(-50%);
+  color: inherit;
+  font-size: clamp(7px, 1.05vw, 10px);
+  letter-spacing: .13em;
+  white-space: nowrap;
+}
+.artist-bold-title h2 { margin: 0; }
+.artist-bold-title .artist-mark {
+  display: block;
+  width: 100%;
+  height: auto;
+  translate: -11% 8%;
+  filter: drop-shadow(0 1px 2px #1b1416a0);
+}
+.artist-bold-title .artist-latin {
+  display: block;
+  margin-top: -8%;
+  font-family: var(--font);
+  color: inherit;
+  font-size: clamp(8px, 1.3vw, 12px);
+  font-weight: 500;
+  letter-spacing: .19em;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.artist-bold .artist-bold-photos { grid-template-columns: minmax(0, 1fr); }
+.artist-bold-photos figure:first-child img {
+  aspect-ratio: 1.62;
+  object-fit: cover;
+  object-position: 36% 46%;
+}
+.artist-bold-photos figure:last-child {
+  justify-self: end;
+  width: 100%;
+}
+.artist-bold .artist-bio { line-height: 1.76; }
+.artist-bold .artist-bio p + p { margin-top: 9px; }
+@media (min-width: 620px) {
+  .artist-bold .artist-bio { line-height: 1.62; }
+  .artist-bold .artist-bio p + p { margin-top: 5px; }
+  .artist-bold .artist-bold-photos {
+    align-self: stretch;
+    grid-auto-rows: 1fr;
+    margin-block: 2px 3px;
+  }
+  .artist-bold-photos figure {
+    position: relative;
+  }
+  .artist-bold-photos figure::before {
+    content: "";
+    display: block;
+    aspect-ratio: 1.62;
+  }
+  .artist-bold-photos figure img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+  .artist-bold-photos figure:last-child img { object-position: 50% 12%; }
+}
+@media (min-width: 690px) {
+  .artist-bold .artist-bio { line-height: max(1.62em, 22.7px); }
+}
+@media (max-width: 619px) {
+  .artist-bold .artist-bold-cover { aspect-ratio: 1.70; }
+  .artist-bold .artist-bold-title { width: 20%; }
+  .artist-bold .artist-bold-photos {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: center;
+  }
+  .artist-bold-photos figure:first-child { grid-column: auto; }
+  .artist-bold-photos figure:last-child { width: 100%; }
+}
