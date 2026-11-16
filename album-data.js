@@ -16,32 +16,29 @@ window.ALBUM_DATA = {
     {
       "number": 1,
       "title": "太空流民#1出发",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n记者:刘津杉/阿娇/小岛\n念白采样：外婆\n录音：李奥\n音频编辑：李奥\n封面摄影：阿料\n混音：李奥\n母带：杨路帆@Cashmere Studio ",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n记者:刘津杉/阿娇/小岛\n念白采样：外婆\n录音：李奥\n音频编辑：李奥\n封面摄影：阿料\n混音：李奥\n母带：L. U. Min",
       "lyrics": [
-        "星际穿越台词：",
-        "没错，但我们现在不需要工程师了",
-        "我们缺少的不是电视和飞机",
-        "我们缺少的是食物",
+        "Okay, well, right now, we need a different kind of future",
+        "此刻，我们需要的是另一种未来。",
+        "We have the machines to take us beyond the stars",
+        "我们已有足以带我们飞越群星的机器。",
+        "But we're losing our way",
+        "可我们正渐渐迷失方向。",
         "离家的列车已经越开越远",
-        "（记者：今天已经是你太空飞行的第三天了，请问现在感想如何？）",
         "身后全是山",
-        "记者：此次壮举的动机是什么呢？他们说你想当英雄",
         "和父亲道别在炎暑的车站",
         "他身后是汗",
-        "记者:那燃料够返航吗？",
         "远行后就回不来",
         "哪怕浩瀚吞没 我不起眼的彼岸",
-        "（记者：那你家人怎么看的？）",
         "远行后就回不来",
         "只身星辰浩瀚 有繁星们的陪伴",
-        "（外婆：今天，我这么幸福哈，我也满足了）",
         "身后的山没了",
         "他眼里多了期盼"
       ],
-      "audio": "https://soulvisa-lossless-test-20261104-1313808286.cos.ap-hongkong.myqcloud.com/01.flac",
-      "sourceDocument": "太空流民#1出发.docx",
+      "audio": "https://wcnujr548fca.feishu.link/spark/app/app_17hce27jycz/runtime/api/v1/storage/object/bucket_aadk5kw35twdw/1882016677727579.flac",
+      "sourceDocument": "1、太空流民#1出发(1).docx",
       "brief": "离乡的记忆与星际远行交叠，奔向未知的勇气里，也藏着无法返航的代价。",
-      "duration": 82.469271,
+      "duration": 82.469333,
       "creditsTop": [
         "作词：李奥",
         "作曲：李奥",
@@ -55,7 +52,7 @@ window.ALBUM_DATA = {
         "音频编辑：李奥",
         "封面摄影：阿料",
         "混音：李奥",
-        "母带：杨路帆@Cashmere Studio "
+        "母带：L. U. Min"
       ],
       "documentHeading": "《太空流民#1出发》Intro"
     },
@@ -136,7 +133,7 @@ window.ALBUM_DATA = {
     {
       "number": 3,
       "title": "露露小姐",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n古典吉他：李奥\n电吉他：李奥\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio ",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n古典吉他：李奥\n电吉他：李奥\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Verse1:",
         "那天我走出山隘",
@@ -189,15 +186,15 @@ window.ALBUM_DATA = {
         "和声：李奥",
         "录音：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio "
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《露露小姐》"
     },
     {
       "number": 4,
       "title": "云景路",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n木吉他：张津瑞/李奥\n电吉他：张津瑞\n贝斯：李奥\n钢琴：李奥\n曼陀铃：李奥\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio ",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n木吉他：张津瑞/李奥\n电吉他：张津瑞\n贝斯：李奥\n钢琴：李奥\n曼陀铃：李奥\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Verse1:",
         "那就轻抚吧",
@@ -263,15 +260,15 @@ window.ALBUM_DATA = {
         "和声：李奥",
         "录音：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio "
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《云景路》"
     },
     {
       "number": 5,
       "title": "太空流民#2发现",
-      "credit": "制作人：李奥\n编曲：李奥\n和声：李奥\n木吉他：李奥\n音频编辑：李奥\n录音：李奥\n混音：李奥\n母带：杨路帆@Cashmere Studio ",
+      "credit": "制作人：李奥\n编曲：李奥\n和声：李奥\n木吉他：李奥\n音频编辑：李奥\n录音：李奥\n混音：李奥\n母带：L. U. Min",
       "lyrics": [],
       "audio": "https://soulvisa-lossless-test-20261104-1313808286.cos.ap-hongkong.myqcloud.com/05.flac",
       "sourceDocument": "《太空流民#2发现》.docx",
@@ -285,7 +282,7 @@ window.ALBUM_DATA = {
         "音频编辑：李奥",
         "录音：李奥",
         "混音：李奥",
-        "母带：杨路帆@Cashmere Studio "
+        "母带：L. U. Min"
       ],
       "creditsBottom": [],
       "documentHeading": "《太空流民#2发现》"
@@ -293,7 +290,7 @@ window.ALBUM_DATA = {
     {
       "number": 6,
       "title": "落水狗",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n电吉他：李奥\n合成器：李奥\n贝斯：李奥\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：Felix Davis @Metropolis Studios",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n电吉他：李奥\n合成器：李奥\n贝斯：李奥\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：Felix Davis @Metropolis Studios",
       "lyrics": [
         "Veres1：",
         "在时代门外  栖身了数载",
@@ -355,7 +352,7 @@ window.ALBUM_DATA = {
         "和声：李奥",
         "录音：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
+        "混音：L. U. Min",
         "母带：Felix Davis @Metropolis Studios"
       ],
       "documentHeading": "《落水狗》"
@@ -363,7 +360,7 @@ window.ALBUM_DATA = {
     {
       "number": 7,
       "title": "矛盾雨Feat.陈以诺Sarah",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n古典吉他：李奥\n电吉他：张津瑞\n贝斯：李奥\n和声：李奥/陈以诺Sarah\n录音：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n古典吉他：李奥\n电吉他：张津瑞\n贝斯：李奥\n和声：李奥/陈以诺Sarah\n录音：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Veres1:",
         "你带着湿漉的月向东去",
@@ -427,15 +424,15 @@ window.ALBUM_DATA = {
         "和声：李奥/陈以诺Sarah",
         "录音：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio"
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《矛盾雨》feat.陈以诺Sarah"
     },
     {
       "number": 8,
       "title": "石滩",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n电吉他：李奥\n合成器：李奥\n钢琴：李奥\n贝斯：梁波\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio ",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n电吉他：李奥\n合成器：李奥\n钢琴：李奥\n贝斯：梁波\n和声：李奥\n录音：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Verse1:",
         "潮汐漫湿陆地",
@@ -497,15 +494,15 @@ window.ALBUM_DATA = {
         "和声：李奥",
         "录音：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio "
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《石滩》"
     },
     {
       "number": 9,
       "title": "Limbo",
-      "credit": "作词：SARRA梁馨予\n作曲：李奥\n编曲：李奥\n制作人：李奥\n电吉他：李奥/张津瑞\n合成器：李奥\n鼓：罗彬 Robin\n和声：李奥/SARRA梁馨予\n录音：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio",
+      "credit": "作词：SARRA梁馨予\n作曲：李奥\n编曲：李奥\n制作人：李奥\n电吉他：李奥/张津瑞\n合成器：李奥\n鼓：罗彬 Robin\n和声：李奥/SARRA梁馨予\n录音：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Veres1:",
         "The sun is getting high",
@@ -633,8 +630,8 @@ window.ALBUM_DATA = {
         "和声：李奥/SARRA梁馨予",
         "录音：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio"
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《Limbo》"
     },
@@ -872,7 +869,7 @@ window.ALBUM_DATA = {
     {
       "number": 13,
       "title": "太空流民#3融解",
-      "credit": "作曲：李奥\n编曲：李奥\n制作人：李奥\n钢琴：李奥\n录音：施鑫文月\n录音棚：江好同频\n混音：李奥\n母带：杨路帆@Cashmere Studio",
+      "credit": "作曲：李奥\n编曲：李奥\n制作人：李奥\n钢琴：李奥\n录音：施鑫文月\n录音棚：江好同频\n混音：李奥\n母带：L. U. Min",
       "lyrics": [],
       "audio": "https://soulvisa-lossless-test-20261104-1313808286.cos.ap-hongkong.myqcloud.com/13.flac",
       "sourceDocument": "《太空流民#3融解》.docx",
@@ -886,7 +883,7 @@ window.ALBUM_DATA = {
         "录音：施鑫文月",
         "录音棚：江好同频",
         "混音：李奥",
-        "母带：杨路帆@Cashmere Studio"
+        "母带：L. U. Min"
       ],
       "creditsBottom": [],
       "documentHeading": "《太空流民#3融解》"
@@ -894,7 +891,7 @@ window.ALBUM_DATA = {
     {
       "number": 14,
       "title": "丰饶之海",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n英文词曲：鹤子\n钢琴：李奥\n和声：李奥/真挚议题Soulfulagenda /罗陈鹤子/康渺/王馨语/ 仁青康珠 / 唐康宁 / 郑立欣 / 张益康/孔祥宇/郭敏轩/范婷/吕雯/曹艺凡\n和声编写：李奥/罗陈鹤子@真挚议题Soulfulagenda\n录音：李奥\n录音室：简单对话录音棚\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n英文词曲：鹤子\n钢琴：李奥\n和声：李奥/真挚议题Soulfulagenda /罗陈鹤子/康渺/王馨语/ 仁青康珠 / 唐康宁 / 郑立欣 / 张益康/孔祥宇/郭敏轩/范婷/吕雯/曹艺凡\n和声编写：李奥/罗陈鹤子@真挚议题Soulfulagenda\n录音：李奥\n录音室：简单对话录音棚\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Intro：",
         "Looking up ",
@@ -981,15 +978,15 @@ window.ALBUM_DATA = {
         "录音：李奥",
         "录音室：简单对话录音棚",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio"
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《丰饶之海》"
     },
     {
       "number": 15,
       "title": "是的",
-      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n木吉他：李奥\n电吉他：李奥\n滑棒吉他：张津瑞\n钢琴：SARRA梁馨予\n和声：李奥\n音频编辑：李奥\n混音：杨路帆@Cashmere Studio \n母带：杨路帆@Cashmere Studio",
+      "credit": "作词：李奥\n作曲：李奥\n编曲：李奥\n制作人：李奥\n木吉他：李奥\n电吉他：李奥\n滑棒吉他：张津瑞\n钢琴：SARRA梁馨予\n和声：李奥\n音频编辑：李奥\n混音：L. U. Min\n母带：L. U. Min",
       "lyrics": [
         "Veres1:",
         "风那次回头",
@@ -1064,8 +1061,8 @@ window.ALBUM_DATA = {
         "钢琴：SARRA梁馨予",
         "和声：李奥",
         "音频编辑：李奥",
-        "混音：杨路帆@Cashmere Studio ",
-        "母带：杨路帆@Cashmere Studio"
+        "混音：L. U. Min",
+        "母带：L. U. Min"
       ],
       "documentHeading": "《是的》"
     }
